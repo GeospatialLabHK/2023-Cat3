@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CodePen - Figure + Figcaption
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            CSDI Awards 2023
+        </div>
+        <div id="page-title1">
+            🏆
+        </div>
+        <div id="page-caption">
+            Secondary Category
+        </div>
+        <div id="page-caption1">
+            3
+        </div>
+        <div id="page-description">
+            Our showroom features StoryMaps from S4 to S6 students who have been recognized in the Category 3 awards.
+            <br>
+            <br>
+            This year's theme is "Environmental, Social, and Governance" (ESG), which addresses crucial issues for our city's sustainable future.
+            <br/>
+            <br/>
+            Students applied ESG principles to suggest improvements for our city in areas of sustainability, resilience, and diversity. The ESG themes touch upon environmental care, social inclusivity, and resource access, demonstrating the potential of spatial data in problem-solving.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>
+                    New Town Report
+                </h1>
+                <img alt="" src="pic/new_town_v2.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        St. Paul's Co-educational College
+                    </span>
+                    <p>
+                        Is Hong Kong's ambitious 50-year town project delivering on its vision? Dive into a spatial analysis that unveils the city's urban truths, from environmental concerns to commuting challenges. This study offers a fresh look at Hong Kong's urban planning.
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/2aa9045d5c1c4e70b330499c7c98da16">
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>
+                    Red Tide in Hong Kong
+                </h1>
+                <img alt="" src="pic/red_tides_v2.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        SKH Tang Shiu Kin Secondary School
+                    </span>
+                    <p>
+                        Explore the phenomenon of red tides in Hong Kong's waters, caused by rapid algal blooms. Discover their effects on marine life and local residents in this in-depth study on their spatial impact.
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/6b5fb8d8e24c4cb9b9e71ff359c833e7">
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                    Smart Community Fridge Supply Chain
+                </h1>
+                <img alt="" src="pic/fridge_v2.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        Kowloon Sam Yuk Secondary School
+                    </span>
+                    <p>
+                        In 2022, a unique fridge appeared on a campus - not for cooling, but for sharing food with those in need. Dive into how repurposed fridges, combined with STEM and spatial data, are making strides in Environmental, Social, and Governance (ESG) goals.
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/6ff4533041cb4080a5f1900edfbeb7f7">
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container4">
+            <figure class="image-block">
+                <h1>
+                    Where's the Waterfront?
+                </h1>
+                <img alt="" src="pic/promenade.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        HKFEW Wong Cho Bau Secondary School
+                    </span>
+                    <p>
+                        With the fourth-highest population density globally, Hong Kong residents face intense daily stresses. There's a need for open spaces for relaxation. Properly planned waterfronts can improve living standards.
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/a621ee506a02403a9472c00fccaa07c8">
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- Click empty space to exit StoryMap --
+            </p1>
+        </div>
+        <div class="switch">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">EN</span>
+            <span class="off">繁中</span>
+          </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            document.getElementById("language-toggle").addEventListener("click", function() {
+                if (document.getElementById("language-toggle").checked) {
+                    window.location.href = "index_zh.html";
+                } else {
+                    window.location.href = "index.html";
+                }
+            });
+            </script>
+    </body>
+</html>
